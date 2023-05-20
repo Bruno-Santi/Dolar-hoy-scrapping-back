@@ -38,8 +38,24 @@ const getInfo = async () => {
     }
   );
 
+  const dolarSolidario = await page.$eval(
+    "a[href='/cotizaciondolarturista']",
+    (element) => {
+      const name = element.textContent;
+      const venta =
+        element.nextElementSibling.querySelector(".venta .val").textContent;
+
+      return {
+        name,
+        venta,
+      };
+    }
+  );
+
   await browser.close();
-  return { dolarBlue, dolarOficial };
+  if (!dolarOficial || !dolarBlue || !dolarSolidario)
+    throw Error("Error al obtener datos");
+  return { dolarOficial, dolarBlue, dolarSolidario };
 };
 
 module.exports = getInfo;
