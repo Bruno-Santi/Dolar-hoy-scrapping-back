@@ -1,0 +1,8 @@
+node_modules
+/test-results/
+/playwright-report/
+/playwright/.cache/
+package-lock.json  
+demo-todo-app.spec.json
+example.spec.json
+dolar.png
