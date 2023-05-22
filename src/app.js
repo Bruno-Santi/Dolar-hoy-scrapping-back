@@ -19,7 +19,7 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   next();
 });
-app.use("/get", async (req, res) => {
+app.get("/get", async (req, res) => {
   try {
     const info = await getInfo();
     res.status(200).json(info);
