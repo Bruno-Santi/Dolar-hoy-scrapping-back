@@ -1,10 +1,7 @@
-const pw = require("playwright");
+const { chromium, selectors } = require("playwright");
 
 const getInfo = async () => {
-  const browser = await pw.chromium.connectOverCDP(
-    "wss://chrome.browserless.io?token=7d906df3-14a7-4ab3-9944-824d7a6f51a4"
-  );
-
+  const browser = await chromium.launch();
   const page = await browser.newPage();
   await page.goto("https://dolarhoy.com/");
   const dolarBlue = await page.$eval(
