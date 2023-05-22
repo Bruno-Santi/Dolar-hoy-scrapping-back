@@ -28,5 +28,11 @@ app.get("/", async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 });
-
+app.get("/hola", async (req, res) => {
+  try {
+    res.status(200).json({ hola });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
 module.exports = app;
