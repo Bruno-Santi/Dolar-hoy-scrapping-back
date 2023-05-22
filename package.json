@@ -10,7 +10,8 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.22",
     "playwright": "^1.34.0",
-    "playwright-test": "^9.1.0"
+    "playwright-test": "^9.1.0",
+    "workflow_runner": "^1.12.5"
   },
   "scripts": {
     "start": "node ./index.js"
