@@ -1,5 +1,5 @@
 node_modules
-/test-results/
+
 demo-todo-app.spec.json
 example.spec.json
 dolar.png
